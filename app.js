@@ -19,7 +19,7 @@ async function fetchUsers() {
     const res = await fetch('https://jsonplaceholder.typicode.com/users');
     const data = await res.json();
     data.forEach((user, index) => {
-        userList += `<li>${user.name}</li>`;
+        userList += `<li>${user.name} ------- email: ${user.email}</li>`;
     })
     document.querySelector('.replace_user').innerHTML = userList;
 };
